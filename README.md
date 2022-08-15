@@ -1,0 +1,1 @@
+## JavaScript notlarini icerir.
