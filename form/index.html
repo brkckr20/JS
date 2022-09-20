@@ -14,11 +14,26 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
+                <div id="alert">
+
+                </div>
                 <form id="user-form" method="get">
-                    <input type="number" class="form-control my-2" name="score" id="score">
-                    <input type="submit" class="btn btn-sm btn-success" value="Gönder">
-                    <input type="reset" class="btn btn-sm btn-danger" value="Sıfırla">
+                    <div class="mb-3">
+                        <label class="form-label" for="username">Kullanıcı Adı</label>
+                        <input id="username" type="text" class="form-control my-2" name="score" id="score">
+                    </div>
+                    <label class="form-label" for="score">Not Bilgisi</label>
+                    <input id="score" type="number" class="form-control my-2" name="score" id="score">
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-sm btn-success" value="Gönder">
+                    </div>
                 </form>
+                <ul class="list-group" id="user-list">
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                        A list item
+                        <span class="badge badge-primary badge-pill">14</span>
+                    </li> -->
+                </ul>
             </div>
         </div>
     </div>
@@ -30,7 +45,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <script src="form-ve-form-submit.js"></script>
+    <script src="egzersiz.js"></script>
 </body>
 
 </html>
