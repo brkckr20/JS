@@ -14,15 +14,15 @@ function updateLocalStorage() {
 updateLocalStorage();
 
 
-form.addEventListener("submit", saveNewTodo)
+form.addEventListener("submit", saveNewTodo);
 
 function saveNewTodo(e) {
     e.preventDefault();
     if (input.value.trim()) {
         let liDOM = document.createElement("li");
         liDOM.innerHTML = `
-                            <div class="text-2xl font-semibold">${input.value}</div>
-                            <button class="bg-indigo-100" id="sil">
+                            <div class="text-2xl font-semibold" id="todo-list-items" >${input.value}</div>
+                            <button class="bg-indigo-100 hover:bg-indigo-300 transition-colors" id="sil">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                     stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -34,13 +34,16 @@ function saveNewTodo(e) {
         ulDOM.append(liDOM);
         showAlert("İşlem başarıyla gerçekleştirildi", "green");
         localStorage.clear();
-        taskListLS = [];
-        updateLocalStorage();
+        /* taskListLS = [];
+        updateLocalStorage(); */
     } else {
         showAlert("İşlem başarısız. Lütfen belirtilen alana bir değer giriniz!", "red")
     }
 }
 
+function removeTodo(item) {
+    console.log("item removed");
+}
 
 function check(item) {
     item.classList.toggle("line-through")
