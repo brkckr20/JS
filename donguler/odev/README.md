@@ -1,1 +1,1 @@
-[Patika dev](www.patika.dev)
+[patika](https://www.patika.dev)
