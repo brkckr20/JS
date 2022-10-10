@@ -27,16 +27,35 @@ h2 {
     margin: 40px 0;
 }
 
-.btn-item {
-    margin-left: 15px;
+.btn-list{
+    display: flex;
+    list-style-type: none;
 }
 
-.photo {
-    width: 30%;
-    height: 175px;
+.btn-item {
+    margin-left: 15px;
+    border: 1px solid salmon;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btn-item:first-child{
+    padding: 5px 8px;
+}
+
+.btn-item:hover{
+    background-color: salmon;
+    color: #fff;
+}
+
+img{
+    width: 175px;
+    height:175px;
     object-fit: cover;
-    border: 0.25rem solid black;
     border-radius: 10px;
+    border: 0.25rem solid black;
 }
 
 .menu-items {
@@ -57,6 +76,7 @@ h2 {
 
 h4 {
     color: #e00a00;
+    border-bottom: 1px solid black;
 }
 
 .menu-text {

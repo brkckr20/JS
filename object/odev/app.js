@@ -84,18 +84,62 @@ const menu = [
 
 
 let buttonContainer = document.querySelector(".btn-container");
+let productList = document.querySelector('.section-center');
 
 function createButton() {
     let category = Array.from(new Set(menu.map(item => item.category)))
     let ulDom = document.createElement("ul");
-    let liDom = document.createElement("li")
-
+    category.unshift("All");
     for (let i = 0; i < category.length; i++) {
-        liDom.innerHTML += category[i];
+        let liDom = document.createElement("li");
+        liDom.innerHTML = category[i];
+        liDom.classList.add('btn-item');
+        ulDom.appendChild(liDom);
     }
-
-    ulDom.append(liDom)
-
+    ulDom.classList.add('btn-list');
+    buttonContainer.appendChild(ulDom);
 }
 
+/*
+
+    {
+        id: 1,
+        title: "Tteokbokki",
+        category: "Korea",
+        price: 10.99,
+        img:
+            "https://twoplaidaprons.com/wp-content/uploads/2020/09/tteokbokki-top-down-view-of-tteokbokki-in-a-bowl-500x500.jpg",
+        desc: `Spicy rice cakes, serving with fish cake.`,
+    },
+
+*/
+
+function ProductList() {
+    for (let i = 0; i < menu.length; i++) {
+        let colDiv = document.createElement("div");
+        colDiv.classList.add('col-lg-6','mb-3');
+        let icerik = `
+            <div class="d-flex">
+                <div class="">
+                    <img class="" src="${menu[i].img}" />
+                </div>
+                <div class="w-100 px-4">
+                    <h4 class="d-flex justify-content-between">
+                        <span>${menu[i].title}</span>
+                        <span>$${menu[i].price}</span>
+                    </h4>
+                    <p>${menu[i].desc}</p>
+                </div>
+            </div>
+        `
+        colDiv.innerHTML =icerik;
+        productList.append(colDiv);
+    }
+}
+
+//${productList.innerHTML = menu[i].price}
+
+// <img class="photo" src="${menu[i].img}" />
+// <h4 class="menu-title">${menu[i].title}</h4>
 createButton();
+ProductList();
