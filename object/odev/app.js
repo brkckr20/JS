@@ -1,4 +1,4 @@
-const menu = [
+let menu = [
     {
         id: 1,
         title: "Tteokbokki",
@@ -82,9 +82,9 @@ const menu = [
     }
 ];
 
-
 let buttonContainer = document.querySelector(".btn-container");
 let productList = document.querySelector('.section-center');
+let filter = [];
 
 function createButton() {
     let category = Array.from(new Set(menu.map(item => item.category)))
@@ -94,30 +94,24 @@ function createButton() {
         let liDom = document.createElement("li");
         liDom.innerHTML = category[i];
         liDom.classList.add('btn-item');
+        liDom.onclick = function () {
+            let filteredMenu = menu.filter(item => {
+                return item.category === category[i];
+            });
+            filter = filteredMenu
+            filter.length < 1 ? filter = menu : filter = filteredMenu
+        }
         ulDom.appendChild(liDom);
     }
     ulDom.classList.add('btn-list');
     buttonContainer.appendChild(ulDom);
 }
 
-/*
-
-    {
-        id: 1,
-        title: "Tteokbokki",
-        category: "Korea",
-        price: 10.99,
-        img:
-            "https://twoplaidaprons.com/wp-content/uploads/2020/09/tteokbokki-top-down-view-of-tteokbokki-in-a-bowl-500x500.jpg",
-        desc: `Spicy rice cakes, serving with fish cake.`,
-    },
-
-*/
 
 function ProductList() {
     for (let i = 0; i < menu.length; i++) {
         let colDiv = document.createElement("div");
-        colDiv.classList.add('col-lg-6','mb-3');
+        colDiv.classList.add('col-lg-6', 'mb-3');
         let icerik = `
             <div class="d-flex">
                 <div class="">
@@ -132,14 +126,9 @@ function ProductList() {
                 </div>
             </div>
         `
-        colDiv.innerHTML =icerik;
+        colDiv.innerHTML = icerik;
         productList.append(colDiv);
     }
 }
-
-//${productList.innerHTML = menu[i].price}
-
-// <img class="photo" src="${menu[i].img}" />
-// <h4 class="menu-title">${menu[i].title}</h4>
 createButton();
 ProductList();
