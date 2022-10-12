@@ -79,12 +79,28 @@ let menu = [
         img:
             "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
         desc: `Red bean paste dessert, serving with honey.`,
+    },
+    {
+        id: 10,
+        title: "Doroyaki 2",
+        category: "Japan",
+        price: 3.99,
+        img:
+            "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
+        desc: `Red bean paste dessert, serving with honey.`,
     }
 ];
 
 let buttonContainer = document.querySelector(".btn-container");
 let productList = document.querySelector('.section-center');
-let filter = [];
+
+let selectedMenu = ''
+
+let category = Array.from(new Set(menu.map(item => item.category)))
+
+let newMenuList = menu.filter(m => {
+    return selectedMenu === 'All' ? menu : m.category
+});
 
 function createButton() {
     let category = Array.from(new Set(menu.map(item => item.category)))
@@ -95,11 +111,8 @@ function createButton() {
         liDom.innerHTML = category[i];
         liDom.classList.add('btn-item');
         liDom.onclick = function () {
-            let filteredMenu = menu.filter(item => {
-                return item.category === category[i];
-            });
-            filter = filteredMenu
-            filter.length < 1 ? filter = menu : filter = filteredMenu
+            selectedMenu = category[i];
+            console.log("selected", selectedMenu);
         }
         ulDom.appendChild(liDom);
     }
@@ -109,23 +122,23 @@ function createButton() {
 
 
 function ProductList() {
-    for (let i = 0; i < menu.length; i++) {
+    for (let i = 0; i < newMenuList.length; i++) {
         let colDiv = document.createElement("div");
         colDiv.classList.add('col-lg-6', 'mb-3');
         let icerik = `
-            <div class="d-flex">
-                <div class="">
-                    <img class="" src="${menu[i].img}" />
+                <div class="d-flex">
+                    <div class="">
+                        <img class="" src="${menu[i].img}" />
+                    </div>
+                    <div class="w-100 px-4">
+                        <h4 class="d-flex justify-content-between">
+                            <span>${menu[i].title}</span>
+                            <span>$${menu[i].price}</span>
+                        </h4>
+                        <p>${menu[i].desc}</p>
+                    </div>
                 </div>
-                <div class="w-100 px-4">
-                    <h4 class="d-flex justify-content-between">
-                        <span>${menu[i].title}</span>
-                        <span>$${menu[i].price}</span>
-                    </h4>
-                    <p>${menu[i].desc}</p>
-                </div>
-            </div>
-        `
+            `
         colDiv.innerHTML = icerik;
         productList.append(colDiv);
     }
