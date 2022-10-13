@@ -70,37 +70,25 @@ let menu = [
         img:
             "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F688C2F6-86EC-46C4-B9C7-A6BA01DF7437/Derivates/32E3E72A-F786-406D-AF7F-B30980A9AC6C.jpg",
         desc: `Hot pepper sauce noodle, serving with soy bean and onion`,
-    },
-    {
-        id: 9,
-        title: "Doroyaki",
-        category: "Japan",
-        price: 3.99,
-        img:
-            "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
-        desc: `Red bean paste dessert, serving with honey.`,
-    },
-    {
-        id: 10,
-        title: "Doroyaki 2",
-        category: "Japan",
-        price: 3.99,
-        img:
-            "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
-        desc: `Red bean paste dessert, serving with honey.`,
     }
 ];
 
 let buttonContainer = document.querySelector(".btn-container");
 let productList = document.querySelector('.section-center');
-
-let selectedMenu = ''
+let selectedMenu = null
 
 let category = Array.from(new Set(menu.map(item => item.category)))
 
-let newMenuList = menu.filter(m => {
-    return selectedMenu === 'All' ? menu : m.category
-});
+function city(c = 'All') {
+    const x = menu.filter(a => {
+        if (c == 'All') {
+            return a.category
+        } else {
+            return a.category == c
+        }
+    });
+    return x
+}
 
 function createButton() {
     let category = Array.from(new Set(menu.map(item => item.category)))
@@ -111,18 +99,20 @@ function createButton() {
         liDom.innerHTML = category[i];
         liDom.classList.add('btn-item');
         liDom.onclick = function () {
-            selectedMenu = category[i];
-            console.log("selected", selectedMenu);
+            city('Japan')
         }
+        
         ulDom.appendChild(liDom);
     }
     ulDom.classList.add('btn-list');
     buttonContainer.appendChild(ulDom);
+    ProductList();
 }
 
 
 function ProductList() {
-    for (let i = 0; i < newMenuList.length; i++) {
+    let items = city();
+    for (let i = 0; i < items.length; i++) {
         let colDiv = document.createElement("div");
         colDiv.classList.add('col-lg-6', 'mb-3');
         let icerik = `
@@ -144,4 +134,3 @@ function ProductList() {
     }
 }
 createButton();
-ProductList();
