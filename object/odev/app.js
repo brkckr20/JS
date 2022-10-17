@@ -74,23 +74,15 @@ let menu = [
 ];
 
 let buttonContainer = document.querySelector(".btn-container");
+/* butonların olusturulacagi element */
+
 let productList = document.querySelector('.section-center');
-let selectedMenu = null
+/* yemeklerin listeleneceği element */
 
-let category = Array.from(new Set(menu.map(item => item.category)))
+let category = Array.from(new Set(menu.map(item => item.category)));
+/* liste içindeki ülkelerin çekilerek yeni bir array oluşturuldu ve yeni bir ülke eklenmesi durumunda dinamik olarak gelmesi sağlandı */
 
-function city(c = 'All') {
-    const x = menu.filter(a => {
-        if (c == 'All') {
-            return a.category
-        } else {
-            return a.category == c
-        }
-    });
-    return x
-}
-
-function createButton() {
+function createButton() { /* buttonların olusturulması */
     let category = Array.from(new Set(menu.map(item => item.category)))
     let ulDom = document.createElement("ul");
     category.unshift("All");
@@ -98,39 +90,54 @@ function createButton() {
         let liDom = document.createElement("li");
         liDom.innerHTML = category[i];
         liDom.classList.add('btn-item');
-        liDom.onclick = function () {
-            city('Japan')
-        }
-        
+        liDom.addEventListener('click', () => {
+            if (category[i] === 'All') {
+                listAllFoods()
+            }else{
+                selectFoods(category[i])
+            }
+        })
         ulDom.appendChild(liDom);
     }
     ulDom.classList.add('btn-list');
     buttonContainer.appendChild(ulDom);
-    ProductList();
+
 }
 
-
-function ProductList() {
-    let items = city();
-    for (let i = 0; i < items.length; i++) {
-        let colDiv = document.createElement("div");
-        colDiv.classList.add('col-lg-6', 'mb-3');
-        let icerik = `
-                <div class="d-flex">
-                    <div class="">
-                        <img class="" src="${menu[i].img}" />
-                    </div>
-                    <div class="w-100 px-4">
-                        <h4 class="d-flex justify-content-between">
-                            <span>${menu[i].title}</span>
-                            <span>$${menu[i].price}</span>
-                        </h4>
-                        <p>${menu[i].desc}</p>
-                    </div>
-                </div>
-            `
-        colDiv.innerHTML = icerik;
-        productList.append(colDiv);
-    }
+const eatMake = (food) => { /* yemek listesi bölümünün oluşturulması */
+    let output = `
+    <div class="menu-items col-lg-6 col-sm-12">
+        <img class="photo" src="${food.img}" alt="${food.title}">
+        <div class="menu-info">
+            <div class="menu-title">
+            <h4>${food.title}</h4>
+            <h4 class="price">${food.price}</h4>
+        </div>
+        <div class="menu-text">${food.desc}</div>
+        </div>
+    </div>  
+    `
+    return output;
 }
+
+const listAllFoods = () => { /* seçili menu olmaması yada All seçilmesi durumunda listelenecek olarak element */
+    let allFoods = "";
+
+    menu.map(item => {
+        allFoods += eatMake(item)
+    })
+    productList.innerHTML = allFoods;
+}
+document.addEventListener("DOMContentLoaded", listAllFoods);
+
+const selectFoods = (cat) => { /* seçilen kategoriye göre listelenmesi işlemi */
+    let selectFood = "";
+    menu.map(item => {
+        if (item.category === cat) {
+            selectFood += eatMake(item);
+        }
+    });
+    productList.innerHTML = selectFood;
+}
+
 createButton();
