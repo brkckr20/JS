@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarih ve saat</title>
+</head>
+
+<body>
+    <div id="day"></div>
+    <div id="clock"></div>
+    <script>
+        let day = document.querySelector("#day");
+        let clock = document.querySelector("#clock");
+        let weekDays = ["Pazar", "PazarTesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi",]
+        let currentDay = new Date().getDay();
+        function getHours() {
+            let hours = new Date().getHours();
+            let minutes = new Date().getMinutes();
+            let seconds = new Date().getSeconds();
+            clock.innerHTML = "Saat : " + hours + ":" + minutes + ":" + seconds
+        }
+        let viewDay = weekDays[currentDay];
+        day.innerHTML = `Bugün günlerden ${viewDay}`;
+        setInterval(() => {
+            getHours();
+        }, 1000);
+    </script>
+</body>
+
+</html>
