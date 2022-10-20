@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        let result = document.querySelector("#result");
+        const monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
+        let date = new Date();
+        let day = date.getDate();
+        let fullYear = date.getFullYear();
+        let month = date.getMonth() +1;
+        // month = monthNames[month]
+
+        let currentDate = day + "/" +month + "/" + fullYear 
+        result.innerHTML = currentDate
+
+    </script>
+</body>
+</html>
