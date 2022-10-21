@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        let result = document.querySelector("#result");
+        let border1 = 5;
+        let border2 = 6;
+        let border3 = 7;
+        let environment = (border1 + border2 + border3) / 2;
+        let output = environment * (environment - border1) * (environment - border2) * (environment - border3)
+        output = Math.sqrt(output);
+        result.innerHTML = `İşlem sonucu : ${output}`
+    </script>
+</body>
+
+</html>
