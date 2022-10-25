@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artık Yıl Hesaplama</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="number" id="year" placeholder="Yıl giriniz...">
+        <button onclick="artikYil()">Artık yıl hesapla</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function artikYil() {
+            let result = document.querySelector("#result");
+            let year = parseInt(document.querySelector("#year").value);
+            let output = year % 4;
+            let option1 = year % 400;
+            let option2 = year % 4000;
+            if (year !== '') {
+                if (output === 0 || option1 === 0 && option2 !== 0) {
+                    result.innerHTML = `${year} artık yıldır.`
+                } else {
+                    result.innerHTML = `${year} artık değildir.`
+                }
+            } else {
+                alert("Lütfen alanları doldurunuz!")
+            }
+        }
+    </script>
+</body>
+
+
+</html>
