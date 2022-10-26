@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Program to find 1st January is being a Sunday between 2014 and 2050.</title>
+</head>
+
+<body>
+
+    <script>
+        let year;
+        let year1 = 2014;
+        let year2 = 2050;
+        for (year = year1; year <= year2; year++) {
+            let d = new Date(year, 0, 1);
+            // console.log(d.getDay());
+            if (d.getDay() === 0) {
+                console.log(`1 Ocak tarihini pazar günü olduğu yıl : ${year}`)
+            }
+
+        }
+    </script>
+</body>
+
+</html>
