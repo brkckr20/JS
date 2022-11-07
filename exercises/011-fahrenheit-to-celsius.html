@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="derece">
+        <button id="toFahrenheit">To Fahrenheit</button>
+        <button id="toCelsius">To Celsius</button>
+        <b><span id="result"></span></b>
+    </div>
+
+    <script>
+        let derece = document.querySelector("#derece");
+        let toFahrenheit = document.querySelector("#toFahrenheit");
+        let toCelsius = document.querySelector("#toCelsius");
+        let result = document.querySelector("#result");
+
+        toFahrenheit.addEventListener("click", () => convert("fahrenheit"))
+        toCelsius.addEventListener("click", () => convert("celsius"))
+
+        function convert(input) {
+            if (input === "celsius") {
+                result.innerHTML = `Sonuç : ${derece.value * 1.8 + 32}`
+            } else if (input === 'fahrenheit') {
+                result.innerHTML = `Sonuç : ${(derece.value - 32) / 1.8}`;
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
