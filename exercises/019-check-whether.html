@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check whether</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+        // Belirli bir tamsayının 100'ün 20'si veya 400'ü içinde olup olmadığını kontrol eden bir JavaScript programı yazın.
+
+        function checkNumber(number) {
+            if (Math.abs(100 - number) <= 20 || Math.abs(400 - number) <= 20) {
+                console.log("Inside")
+            } else {
+                console.log("Outside")
+            }
+        }
+
+        checkNumber(110)
+        checkNumber(1000)
+    </script>
+</body>
+
+</html>
