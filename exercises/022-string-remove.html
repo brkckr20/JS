@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Remove</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*
+        write a JavaScript program to remove a character at the specified position of a given string and return the new string
+
+        Belirli bir dizgenin belirtilen konumundaki bir karakteri kaldırmak ve yeni dizgiyi döndürmek için bir JavaScript programı yazın
+        */
+
+        function remove(str) {
+            let one = str.substring(0, 5);
+            let two = str.substring(6, str.length);
+            return (one + two);
+        }
+
+        console.log(remove("denemeyazısılorem ipsum"))
+    </script>
+</body>
+
+</html>
