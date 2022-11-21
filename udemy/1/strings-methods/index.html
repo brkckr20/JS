@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Metotları</title>
+</head>
+
+<body>
+
+    <script>
+        //slice --> stringleri keser
+        let str1 = "apple, banana, cucumber";
+
+        let part1 = str1.slice(7, 13);
+
+
+        // console.log("Default : ", str1)
+        // console.log("Sliced value : ", part1)
+
+        let str2 = "apple, banana, kiwi";
+        let part2 = str2.slice(-12, -6)
+
+        console.log(part2);
+
+
+        //substring
+        let str3 = "apple, banana, kiwi";
+        let part3 = str3.substring(7, 13);
+        console.log(part3)
+
+
+        //substr
+        let part4 = str3.substr(7, 6)
+        console.log(part4)
+
+    </script>
+
+</body>
+
+</html>
