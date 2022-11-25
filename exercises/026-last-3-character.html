@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last 3 character</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more
+        // tr : Son 3 karakteri alarak ve hem öne hem de arkaya eklenen belirli bir diziden yeni bir dizi oluşturmak için bir JavaScript programı yazın. Dize uzunluğu 3 veya daha fazla olmalıdır
+        function check(str) {
+            if (str.length >= 3) {
+                return str.substring(str.length - 3, str.length) + str + str.substring(str.length - 3, str.length)
+            } else if (str === null || str === undefined || !str) {
+                return 'String is not be empty';
+            } else {
+                return 'String length must be 3 character or more'
+            }
+        }
+
+        console.log(check("lorem ipsum dolor sit amet"));
+    </script>
+</body>
+
+</html>
