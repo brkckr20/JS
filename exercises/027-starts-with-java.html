@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starts With Java</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to check whether a string starts with 'Java' and false otherwise
+        // Bir dizginin 'Java' ile başlayıp başlamadığını kontrol etmek için bir JavaScript programı yazın, aksi halde yanlış
+
+        const IsStartWithJava = (str) => {
+            if (str.length < 0) {
+                return false
+            }
+            if (str.startsWith("Java")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(IsStartWithJava("Javascript"));
+    </script>
+
+</body>
+
+</html>
