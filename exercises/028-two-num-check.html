@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them are in the said range
+        //Verilen iki tamsayı değerinin 50..99 (dahil) aralığında olup olmadığını kontrol eden bir JavaScript programı yazın. Bunlardan herhangi biri söz konusu aralıktaysa true değerini döndürün
+
+        const checkNumber = (num1, num2) => {
+            if ((num1 >= 50 && num1 <= 99) || (num2 >= 50 && num2 <= 99)) {
+                return true
+            } else {
+                return false
+            }
+        }
+        console.log(checkNumber(10, 1))
+    </script>
+</body>
+
+</html>
