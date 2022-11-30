@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Num check</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.
+        // Verilen üç tamsayı değerinin 50..99 (dahil) aralığında olup olmadığını kontrol eden bir JavaScript programı yazın. Bunlardan biri veya daha fazlası söz konusu aralıktaysa true değerini döndürün.
+
+        function checkNums(int1, int2, int3) {
+            if ((int1 >= 50 && int1 <= 99) || (int2 >= 50 && int2 <= 99) || (int3 >= 50 && int3 <= 99)) {
+                return true;
+            }
+            return false;
+        }
+
+        console.log(checkNums(20, 1, 525))
+    </script>
+</body>
+
+</html>
