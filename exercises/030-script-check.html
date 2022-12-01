@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Write a JavaScript program to check whether a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one
+        //"Script" dizisinin belirli bir dizide 5. (dizin 4) konumunda bulunup bulunmadığını kontrol etmek için bir JavaScript programı yazın, eğer "Script" mevcutsa dizeyi "Script" olmadan döndürün, aksi takdirde orijinali döndürün
+
+        function check(str) {
+            if (str.length >= 5) {
+                if (str.substring(4) === "script") {
+                    return str.substring(0, 4);
+                } else {
+                    return str;
+                }
+            } else {
+                return str;
+            }
+
+        }
+
+        console.log(check("comp"));
+        console.log(check("javascript"));
+    </script>
+</body>
+
+</html>
