@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number</title>
+</head>
+
+<body>
+
+    <script>
+        function check_largest(n1, n2, n3) {
+            if (n1 > n2 || n1 > n3) {
+                return `${n1} sayısı en büyük sayıdır`
+            } else if (n2 > n1 || n2 > n3) {
+                return `${n2} sayısı en büyük sayıdır`
+            } else {
+                return `${n3} sayısı en büyük sayıdır`
+            }
+        }
+
+        console.log(check_largest(9, 81, 9))
+    </script>
+
+</body>
+
+</html>
