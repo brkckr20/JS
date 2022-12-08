@@ -1,4 +1,4 @@
-console.log(document.location.pathname)  // /DOM-ile-calismak/index.html
+console.log(document.location.pathname)  // /DOM-ile-calismak/035-string-check.html
 console.log(document.body)
 console.log(document.head)
 
