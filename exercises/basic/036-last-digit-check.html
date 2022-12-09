@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Digit Check</title>
+</head>
+
+<body>
+
+    <script>
+        const check_last_digit = (num1, num2, num3) => {
+            if (num1 > 0 && num2 > 0 && num3 > 0) {
+                if ((num1 % 10 == num2 % 10) && (num1 % 10 == num3 % 10)) {
+                    console.log("Girilen sayilarin son karakterleri ayni");
+                }
+                else {
+                    console.log("Girilen sayilarin son karakterleri ayni değil");
+                }
+            } else {
+                console.log("Lütfen 0 dan büyük bir sayı giriniz");
+            }
+        }
+
+        check_last_digit(102, 12102, 22)
+        check_last_digit(10123, 12102, -22)
+    </script>
+
+</body>
+
+</html>
