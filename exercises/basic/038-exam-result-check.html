@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+
+<body>
+
+    <script>
+        //Write a JavaScript program to check the total marks of a student in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam." the student will get A+ grade and total marks must be greater than or equal to 90. Return true if the student get A+ grade or false otherwise.
+        //tr : Bir öğrencinin çeşitli sınavlardaki toplam notlarını kontrol etmek için bir JavaScript programı yazın. Toplam notu 89..100 (dahil) aralığında olan öğrenci, sınav "Final-sınav" ise A+ notu alır. öğrenci A+ notu alır ve toplam notu 90'dan büyük veya ona eşit olmalıdır. Öğrenci A+ notu alırsa true, aksi takdirde false döndürür.
+        const examResultCheck = function (point) {
+            let letterGrade;
+            if (point > 89 && point <= 100) {
+                letterGrade = "A+";
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        console.log(examResultCheck(98));
+    </script>
+</body>
+
+</html>
