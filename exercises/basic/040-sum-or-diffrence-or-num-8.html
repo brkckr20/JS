@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.
+        // Verilen iki tamsayıdan birinin 8 mi yoksa toplamının veya farkının 8 mi olduğunu kontrol eden bir JavaScript programı yazın.
+
+        function checkNumber(num1, num2) {
+            if (num2 > num1) {
+                if (num1 === 8 || num2 === 8) {
+                    return `Numaralardan en az biri ${num1} 'dir`;
+                } else if ((num1 + num2 === 8) || (num1 - num2 === 8)) {
+                    return `Numaralardan toplamı veya farkı 8 'dir`;
+                } else {
+                    return "Numaralardan herhangi biri, toplamları veya farkları 8 e eşit değildir";
+                }
+            } else {
+                return "Lütfen ikinci sayıyı 1.den büyük giriniz!"
+            }
+        }
+
+        console.log(checkNumber(16, 18));
+    </script>
+
+</body>
+
+</html>
