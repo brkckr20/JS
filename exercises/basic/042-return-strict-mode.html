@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /**
+         *  Write a JavaScript program to check whether three given numbers are increasing in strict mode or in soft mode.
+            Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+         *  tr : Verilen üç sayının katı modda mı yoksa esnek modda mı arttığını kontrol eden bir JavaScript programı yazın.
+            Not: Katı mod -> 10, 15, 31 : Yumuşak mod -> 24, 22, 31 veya 22, 22, 31 
+        */
+
+
+        function numOrder(num1, num2, num3) {
+            if (num3 > num1 && num3 > num2) {
+                return 'Strict mode'
+            } else if (num3 > num2) {
+                return 'Soft mode'
+            } else {
+                return 'Undefinded'
+            }
+        }
+
+        console.log(numOrder(5, 1, 1));;
+    </script>
+
+</body>
+
+</html>
