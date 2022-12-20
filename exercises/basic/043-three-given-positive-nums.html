@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+        //Verilen üç sayıdan (negatif olmayan tamsayılar) ikisinin veya hepsinin en sağdaki rakamın aynı olduğunu kontrol eden bir JavaScript programı yazın.
+
+        function check(num1, num2, num3) {
+            if (num1 > 0 && num2 > 0 && num3 > 0) {
+                if (num1 % 10 === num2 % 10 || num1 % 10 === num3 % 10 || num2 % 10 === num3 % 10) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        console.log(check(12, 22, 32))
+    </script>
+</body>
+
+</html>
