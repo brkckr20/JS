@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others
+        //Verilen üç tamsayıdan bir sayının 20'den büyük veya eşit ve diğerlerinden birinden küçük olup olmadığını kontrol eden bir JavaScript programı yazın
+
+        const check = (num1, num2, num3) => {
+            if ((num1 >= 20 || num2 >= 20 || num3 >= 20) && (num1 < num2 || num1 < num3 || num2 < num3)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(check(21, 66, 75))
+        console.log("--");
+
+        // function lessby20_others(x, y, z) {
+        //     return (x >= 20 && (x < y || x < z)) ||
+        //         (y >= 20 && (y < x || y < z)) ||
+        //         (z >= 20 && (z < y || z < x));
+        // }
+        // console.log(lessby20_others(23, 45, 10));
+        // console.log(lessby20_others(23, 23, 10));
+        // console.log(lessby20_others(21, 66, 75));
+    </script>
+</body>
+
+</html>
