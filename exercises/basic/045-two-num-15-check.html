@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15
+        //Verilen iki tamsayı değerini kontrol eden ve sayılardan biri 15 ise veya bunların toplamı veya farkı 15 ise doğru döndüren bir JavaScript programı yazın
+
+
+        const check = (num1, num2) => {
+            if ((num1 === 15 || num2 === 15) || (num1 - num2 === 15 || num1 + num2 === 15)) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        console.log(check(10, 5));
+        console.log(check(20, 5));
+        console.log(check(20, 3));
+        console.log(check(30, 15));
+        console.log(check(1, 15));
+        console.log(check(5, 9));
+    </script>
+</body>
+
+</html>
