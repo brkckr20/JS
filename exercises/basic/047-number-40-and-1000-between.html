@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /**
+         *  Write a JavaScript program to check whether a given number is presents in the range 40..10000.
+
+            For example 40 presents in 40 and 4000
+         * 
+         * TR : Belirli bir sayının 40..10000 aralığında olup olmadığını kontrol eden bir JavaScript programı yazın.
+         * */
+
+        const check = (number) => {
+            if (number >= 40 && number <= 10000) {
+                return `${number} sayısı 40 ile 10000 arasında`
+            } else {
+                return `${number} sayısı 40 ile 10000 arasında değil`
+            }
+        }
+
+        console.log(check(4));
+        console.log(check(40));
+    </script>
+</body>
+
+</html>
