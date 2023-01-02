@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Write a JavaScript program to capitalize the first letter of each word of a given string
+        // tr -> Belirli bir dizedeki her kelimenin ilk harfini büyük yapan bir JavaScript programı yazın
+
+        // const x = (str) => {
+        //     console.log(str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase())
+        // }
+        // x("abc")
+        // x("test 1 2 3")
+
+        function letter(val) {
+            val = val.split(" ");
+            for (var i = 0; i < val.length; i++) {
+                val[i] = val[i][0].toUpperCase() + val[i].substr(1);
+            }
+
+            console.log(val.join(" "));
+        }
+        letter("lorem ipsum dolor sit amet");
+    </script>
+</body>
+
+</html>
