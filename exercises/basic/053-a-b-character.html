@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string
+        //tr -> a ve b karakterlerinin belirli bir dizide herhangi bir yerde (en az bir kez) tam olarak 3 basamakla ayrılıp ayrılmadığını kontrol eden bir JavaScript programı yazın
+        const checkCharacters = (title) => {
+            if (title.length >= 5) {
+                if (title.includes("a") && title.includes("b")) {
+                    let a = title.indexOf("a");
+                    let b = title.indexOf("b");
+                    if ((a - b === 4) || (b - a === 4)) {
+                        console.log(true);
+                    } else {
+                        console.log(false);
+                    }
+                } else {
+                    console.log("yok");
+                }
+
+            } else {
+                console.log("Lütfen 5 karakter veya daha fazla karakter giriniz");
+            }
+        }
+        checkCharacters("laore bm");
+
+        /* with regular expression */
+        function check(str) {
+            return (/a...b/).test(str) || (/b...a/).test(str);
+        }
+        console.log(check("laore bm"));
+    </script>
+</body>
+
+</html>
