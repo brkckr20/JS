@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to divide two positive numbers and return the result as string with properly formatted commas.
+        // tr : İki pozitif sayıyı bölmek ve sonucu düzgün biçimde biçimlendirilmiş virgüller içeren bir dize olarak döndürmek için bir JavaScript programı yazın.
+
+        function divide(n1, n2) {
+            const d = Math.round(n1 / n2).toString();
+            let arr = d.split("");
+            if (d >= 1000) {
+                for (let i = 0; i < div.length; i++) {
+                    arr.splice(i, 0, ",")
+                }
+            }
+            console.log(arr);
+        }
+        divide(121, 6)
+    </script>
+</body>
+
+</html>
