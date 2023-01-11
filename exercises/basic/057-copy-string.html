@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to create a new string of specified copies (positive number) of a given string
+        //Belirli bir dizinin belirtilen kopyalarından (pozitif sayı) yeni bir dizi oluşturmak için bir JavaScript programı yazın
+        function x(string, sayi) {
+            if (sayi < 0) {
+                return false;
+            }
+            console.log(string.repeat(sayi));
+        }
+        x("lorem", 3)
+        x("lorem", -1)
+        x("lorem", 100)
+    </script>
+</body>
+
+</html>
