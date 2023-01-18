@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move the 3 char</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
+        // Belirli bir dizenin başına son üç karakteri taşımak için bir JavaScript programı yazın. Dize uzunluğu üçten büyük veya eşit olmalıdır.
+        const move = str => {
+            if (str.length > 3) {
+                str = str.substring(str.length - 3) + str.substring(0, str.length - 3)
+                return str
+            } else {
+                return "Lütfen 3 karakterden fazla giriniz!"
+            }
+        }
+        console.log(move("abcdefg"));
+    </script>
+
+</body>
+
+</html>
