@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
+        // İki diziyi birleştirmek ve sonucu döndürmek için bir JavaScript programı yazın. Dizelerin uzunluğu aynı değilse, karakterleri daha uzun dizeden kaldırın.
+        const conca = function (str1, str2) {
+            if (str1.length === str2.length) {
+                return str1 + str2
+            } else {
+                if (str1.length > str2.length) {
+                    str1 = str1.slice(0, str2.length);
+                    return str1 + str2
+                } else {
+                    str2 = str2.slice(0, str1.length);
+                    return str1 + str2
+                }
+            }
+        }
+
+        console.log(conca("loremm", "ipsum1"));
+    </script>
+</body>
+
+</html>
