@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to test whether a string end with "Script". The string length must be greater or equal to 6.
+        // Bir dizginin "Script" ile bitip bitmediğini test etmek için bir JavaScript programı yazın. Dize uzunluğu 6'dan büyük veya ona eşit olmalıdır.
+
+        const check = (str) => {
+            if (str.length >= 6) {
+                if (str.endsWith("script") || str.endsWith("Script")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+        console.log(check("loremipsum"));
+        console.log(check("Script"));
+    </script>
+</body>
+
+</html>
