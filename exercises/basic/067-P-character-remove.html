@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.
+        //Belirli bir diziden yeni bir dizi oluşturmak için, ilk veya son karakter 'P' ise, dizinin ilk ve son karakterlerini kaldıran bir JavaScript programı yazın. Koşul karşılanmazsa orijinal diziyi döndürür.
+        function x(string) {
+            if (string.startsWith('P') || string.endsWith('P')) {
+                let first = string.slice(1, string.length);
+                let last = string.slice(1, string.length - 1);
+                return last;
+            } else {
+                return string;
+            }
+        }
+        console.log(x("orems"));
+    </script>
+</body>
+
+</html>
