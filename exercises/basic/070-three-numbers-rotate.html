@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in rotate</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to rotate the elements left of a given array of integers of length 3. 
+        //3 uzunluğundaki belirli bir tamsayı dizisinin solundaki öğeleri döndürmek için bir JavaScript programı yazın
+        const rotate = arr => {
+            if (arr.length === 3) {
+                let newArr = [arr[1], arr[2], arr[0]];
+                return newArr;
+            } else {
+                return "Lütfen 3 karakterli bir array giriniz!"
+            }
+        }
+        console.log(rotate([1, 2, 3]));
+    </script>
+
+</body>
+
+</html>
