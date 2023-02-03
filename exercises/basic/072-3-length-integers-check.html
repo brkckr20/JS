@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JavaScript program to check whether the first and last elements are equal of a given array of integers length 3.
+        //Verilen bir tamsayı dizisinin ilk ve son elemanlarının 3 uzunluğunda olup olmadığını kontrol eden bir JavaScript programı yazın.
+        function check(arr) {
+            if (arr.length >= 3) {
+                return arr[0] === arr[arr.length - 1] ? true : false
+            } else {
+                return "Lütfen 3 karakter veya daha fazla uzunlukta dizi giriniz.";
+            }
+        }
+        console.log(check([10, 20, 10]));
+        console.log(check([12, 20, 10, 12]));
+        console.log(check([12, 20, 10, 5]));
+
+        // output 
+        /*
+        true
+        true
+        false
+        */
+    </script>
+</body>
+
+</html>
