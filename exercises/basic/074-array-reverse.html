@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reverse</title>
+</head>
+
+<body>
+
+    <script>
+        //Write a JavaScript program to reverse the elements of a given array of integers length 3.
+        //Belirli bir tamsayı dizisinin öğelerini tersine çeviren bir JavaScript programı yazın uzunluk 3.
+        function reversee(array) {
+            array.map((i, k, a) => {
+                a = a[a.length - 1].toString() + a[1].toString() + a[0].toString();
+                console.log(a);
+            })
+        }
+        reversee([1, 2, 3])
+    </script>
+</body>
+
+</html>
