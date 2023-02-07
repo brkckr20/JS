@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reverse</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array. 
+        // İlk ve son arasındaki daha büyük değeri bulan ve diğer tüm öğeleri bu değerle ayarlayan bir JavaScript programı yazın. Yeni diziyi görüntüleyin.
+        const larger = function name(arr) {
+            let max = arr[0] > arr[2] ? arr[0] : arr[2];
+            arr[0] = max;
+            arr[1] = max;
+            arr[2] = max;
+            return newArr = [arr[0], arr[1], arr[2]];
+        }
+
+        console.log(larger([10, 23, 56]));
+        console.log(larger([66, 23, 56]));
+    </script>
+</body>
+
+</html>
